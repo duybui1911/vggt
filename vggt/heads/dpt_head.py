@@ -130,7 +130,7 @@ class DPTHead(nn.Module):
         aggregated_tokens_list: List[torch.Tensor],
         images: torch.Tensor,
         patch_start_idx: int,
-        frames_chunk_size: int = 8,
+        frames_chunk_size: int = 4,
     ) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
         """
         Forward pass through the DPT head, supports processing by chunking frames.
